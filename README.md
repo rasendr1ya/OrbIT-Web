@@ -13,25 +13,25 @@
 
 ## 📸 Screenshots
 
-### Halaman Login
+### Halaman Sign In
 <!-- Insert login page screenshot here -->
-![Login Page](docs/screenshots/login.png)
+<img width="2940" height="1732" alt="Screenshot 2025-12-03 at 01 00 00" src="https://github.com/user-attachments/assets/fa25e724-77f7-4f87-89c3-f1ad59867acb" />
+
+### Halaman Register
+<!-- Insert login page screenshot here -->
+<img width="2940" height="1732" alt="Screenshot 2025-12-03 at 01 00 12" src="https://github.com/user-attachments/assets/a926ccc3-78ab-4746-b7a8-8cdcb2a2afd1" />
 
 ### Dashboard
 <!-- Insert dashboard screenshot here -->
-![Dashboard](docs/screenshots/dashboard.png)
+<img width="2940" height="1732" alt="Screenshot 2025-12-03 at 00 54 53" src="https://github.com/user-attachments/assets/c1793811-b1fc-4187-8ebb-a350c87974b2" />
 
 ### Halaman Announcements
 <!-- Insert announcements page screenshot here -->
-![Announcements Page](docs/screenshots/announcements.png)
+<img width="2940" height="1732" alt="Screenshot 2025-12-03 at 00 57 09" src="https://github.com/user-attachments/assets/cab13f81-cf1f-42cb-8b4c-496ee0a5f0fc" />
 
 ### Sistem Booking Ruang Kelas
 <!-- Insert booking page screenshot here -->
-![Classroom Booking](docs/screenshots/booking.png)
-
-### Dropdown Filter (Custom UI)
-<!-- Insert dropdown screenshot here -->
-![Custom Dropdown](docs/screenshots/dropdown.png)
+<img width="2940" height="1732" alt="Screenshot 2025-12-03 at 00 57 21" src="https://github.com/user-attachments/assets/1ea361f3-ea83-43c0-997f-e3024d155303" />
 
 ---
 
