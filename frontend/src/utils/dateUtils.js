@@ -66,3 +66,60 @@ export const getDayOfWeek = (dateString) => {
 
 // Day names
 export const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+// Get current academic week
+export const getAcademicWeek = () => {
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth() + 1; // JavaScript months are 0-indexed
+  const currentDay = now.getDate();
+
+  let semesterStartDate;
+  let semesterType; // 'odd' or 'even'
+
+  // Determine which semester we're currently in
+  // Even semester (Genap): Late February (~26 Feb) to June
+  // Odd semester (Ganjil): Late August (~26 Aug) to December
+
+  if (currentMonth >= 2 && currentMonth <= 6) {
+    // Even semester period (Feb-June)
+    if (currentMonth === 2 && currentDay < 26) {
+      // Before even semester starts - we're in break from odd semester
+      semesterType = 'break';
+    } else {
+      semesterType = 'even';
+      semesterStartDate = new Date(currentYear, 1, 26); // February 26
+    }
+  } else if (currentMonth === 7 || (currentMonth === 8 && currentDay < 26)) {
+    // July or early August - semester break
+    semesterType = 'break';
+  } else if (currentMonth >= 8 && currentMonth <= 12) {
+    // Odd semester period (Late Aug-Dec)
+    if (currentMonth === 8 && currentDay < 26) {
+      semesterType = 'break';
+    } else {
+      semesterType = 'odd';
+      semesterStartDate = new Date(currentYear, 7, 26); // August 26
+    }
+  } else {
+    // January - break between semesters (after odd, before even)
+    semesterType = 'break';
+  }
+
+  // If we're in break period
+  if (semesterType === 'break') {
+    return 'Diluar minggu perkuliahan';
+  }
+
+  // Calculate week number
+  const diffTime = now.getTime() - semesterStartDate.getTime();
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  const weekNumber = Math.floor(diffDays / 7) + 1;
+
+  // If beyond 16 weeks, it's outside academic weeks
+  if (weekNumber > 16 || weekNumber < 1) {
+    return 'Diluar minggu perkuliahan';
+  }
+
+  return `Minggu Perkuliahan ke-${weekNumber}`;
+};

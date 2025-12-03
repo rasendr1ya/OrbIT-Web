@@ -6,7 +6,7 @@ import LoadingSpinner from '../components/common/LoadingSpinner';
 import announcementService from '../services/announcementService';
 import bookingService from '../services/bookingService';
 import Badge from '../components/common/Badge';
-import { getRelativeTime } from '../utils/dateUtils';
+import { getRelativeTime, getAcademicWeek } from '../utils/dateUtils';
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -75,7 +75,7 @@ const Dashboard = () => {
           <h1 className="text-3xl font-semibold text-gray-900 mb-2">
             Welcome back, {user?.fullName?.split(' ')[0]}
           </h1>
-          <p className="text-gray-600">Here's what's happening in your department today</p>
+          <p className="text-gray-600">{getAcademicWeek()}</p>
         </div>
 
         {/* Stats Grid */}

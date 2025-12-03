@@ -183,15 +183,6 @@ OrbIT-Web/
 │   ├── postcss.config.js    # PostCSS config untuk Tailwind v3
 │   ├── craco.config.js      # CRACO configuration override
 │   └── vercel.json          # Vercel deployment configuration
-│
-└── docs/                    # Comprehensive documentation
-    └── orbit-docs/
-        ├── PROJECT_BRIEF.md         # Project overview & requirements
-        ├── ARCHITECTURE.md          # System architecture
-        ├── API_ENDPOINTS.md         # API documentation
-        ├── FRONTEND_GUIDE.md        # Frontend development guide
-        ├── BACKEND_GUIDE.md         # Backend development guide
-        └── DEPLOYMENT_CHECKLIST.md  # Production deployment guide
 ```
 
 ---
@@ -385,6 +376,24 @@ Sistem booking menggunakan intelligent conflict checker yang:
 - Email saat booking direject dengan alasan
 - Notification preferences (future feature)
 
+### Academic Week Tracker 📅
+Sistem pelacakan minggu perkuliahan otomatis yang terintegrasi di Dashboard:
+- **Dynamic Week Detection**: Menampilkan minggu perkuliahan aktif (ke-1 sampai ke-16)
+- **Semester Recognition**: Otomatis mendeteksi semester ganjil dan genap berdasarkan tanggal
+- **Break Period Detection**: Menampilkan "Diluar minggu perkuliahan" saat semester break
+
+**Siklus Akademik:**
+- **Semester Genap** (Even): Dimulai 26 Februari, berlangsung 16 minggu hingga Juni
+- **Semester Ganjil** (Odd): Dimulai 26 Agustus, berlangsung 16 minggu hingga Desember
+- **Semester Break**: Juli-Agustus (antara genap-ganjil) dan Januari-Februari (antara ganjil-genap)
+
+**Contoh Output:**
+- Selama minggu aktif: `"Minggu Perkuliahan ke-14"`
+- Selama libur semester: `"Diluar minggu perkuliahan"`
+- Setelah minggu ke-16: `"Diluar minggu perkuliahan"`
+
+Fitur ini membantu mahasiswa dan dosen untuk tracking progress semester dan planning kegiatan akademik.
+
 ---
 
 ### Quick Test
@@ -461,6 +470,8 @@ Project ini adalah tugas mata kuliah **Pemrograman Web A** di **Teknologi Inform
 - ✅ Redesigned Login & Register pages with split-screen layout
 - ✅ Fixed frontend-backend port configuration (5001)
 - ✅ Fixed MongoDB connection string
+- ✅ Added Academic Week Tracker with automatic semester detection
+- ✅ Updated My Bookings status filter colors to black (minimal design)
 
 ---
 

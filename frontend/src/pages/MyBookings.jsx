@@ -104,7 +104,7 @@ const MyBookings = () => {
               onClick={() => setFilter('all')}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 filter === 'all'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-black text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -114,7 +114,7 @@ const MyBookings = () => {
               onClick={() => setFilter('pending')}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 filter === 'pending'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-black text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -124,7 +124,7 @@ const MyBookings = () => {
               onClick={() => setFilter('approved')}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 filter === 'approved'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-black text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -134,7 +134,7 @@ const MyBookings = () => {
               onClick={() => setFilter('rejected')}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 filter === 'rejected'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-black text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -144,7 +144,7 @@ const MyBookings = () => {
               onClick={() => setFilter('cancelled')}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 filter === 'cancelled'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-black text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
